@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makna Tumbuh Garden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+
+      .glass-effect {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+      }
+
+      .hover-lift {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-spacing {
+        padding: 5rem 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .section-spacing {
+          padding: 3rem 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 font-sans text-gray-800 smooth-scroll">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+      <div
+        class="container mx-auto flex justify-between items-center px-6 py-4 max-w-6xl"
+      >
+        <div class="flex items-center space-x-3">
+          <img
+            alt="Logo with yellow sun, green leaves, and blue water symbol"
+            class="w-10 h-10"
+            height="40"
+            src="logo.jpg"
+            width="40"
+          />
+          <div class="text-gray-900 text-xl font-semibold leading-tight">
+            <div class="font-bold">MAKNA</div>
+            <div class="font-bold text-sm">TUMBUH GARDEN</div>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-1">
+          <a
+            href="#tentang"
+            class="px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          >
+            Tentang
+          </a>
+          <a
+            href="#produk"
+            class="px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          >
+            Produk
+          </a>
+          <a
+            href="#kontak"
+            class="px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          >
+            Kontak
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden p-2 text-gray-700" id="mobile-menu-btn">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        class="md:hidden hidden bg-white border-t border-gray-200"
+        id="mobile-menu"
+      >
+        <div class="px-6 py-4 space-y-2">
+          <a
+            href="#tentang"
+            class="block px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          >
+            Tentang
+          </a>
+          <a
+            href="#produk"
+            class="block px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          >
+            Produk
+          </a>
+          <a
+            href="#kontak"
+            class="block px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          >
+            Kontak
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="banner.jpg"
+          alt="Hydroponic lettuce farm"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0"></div>
+      <div class="absolute inset-0 bg-black opacity-30"></div>
+
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-20 left-10 w-32 h-32 border border-white rounded-full"
+        ></div>
+        <div
+          class="absolute bottom-32 right-16 w-24 h-24 border border-white rounded-full"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/4 w-16 h-16 border border-white rounded-full"
+          f
+        ></div>
+      </div>
+
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto fade-in">
+        <h1
+          class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+        >
+          Makna Tumbuh
+          <span class="block text-emerald-200">Garden</span>
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-emerald-100 mb-8 font-light leading-relaxed"
+        >
+          Karena setiap pertumbuhan punya cerita
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#tentang"
+            class="inline-block bg-white text-emerald-700 px-8 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-all duration-300 hover-lift"
+          >
+            Pelajari Selengkapnya
+          </a>
+          <a
+            href="#produk"
+            class="inline-block border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-emerald-700 transition-all duration-300"
+          >
+            Lihat Produk
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Introduction -->
+    <section id="tentang" class="py-20 bg-white">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 fade-in">
+            <div
+              class="w-80 h-80 lg:w-120 lg:h-120 mx-auto overflow-hidden hover-lift shadow-2xl"
+            >
+              <img
+                src="gambar.png"
+                alt="Person holding hydroponic lettuce"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="lg:w-2/3 fade-in">
+            <h2
+              class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+            >
+              Selamat datang di masa depan
+              <span class="text-emerald-600">pertanian</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              Makna Tumbuh Garden adalah perusahaan pertanian hidroponik yang
+              menghadirkan solusi pangan sehat, ramah lingkungan, dan
+              berkelanjutan. Kami percaya bahwa setiap tetes air, setiap daun
+              yang tumbuh, dan setiap panen yang dihasilkan memiliki makna
+              mendalam.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Bersama kami, mari ciptakan masa depan yang lebih hijau, segar,
+              dan bermakna melalui inovasi pertanian modern yang berkelanjutan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produk Kami -->
+    <section id="produk" class="py-20 bg-gray-50">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Produk <span class="text-emerald-600">Unggulan</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Hasil karya terbaik dari dedikasi kami dalam mengembangkan pertanian
+            hidroponik berkelanjutan
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Selada Hidroponik -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden hover-lift fade-in shadow-lg"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Fresh hydroponic lettuce"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 -mt-12 relative shadow-lg"
+              >
+                <i class="fas fa-leaf text-emerald-600 text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Selada Hidroponik
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Selada segar yang ditanam dengan sistem hidroponik modern.
+                Renyah, sehat, dan bebas pestisida untuk keluarga Anda.
+              </p>
+            </div>
+          </div>
+
+          <!-- Magic AB-Mix -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden hover-lift fade-in shadow-lg"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Hydroponic nutrients and solutions"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 -mt-12 relative shadow-lg"
+              >
+                <i class="fas fa-flask text-yellow-600 text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Magic AB-Mix
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Nutrisi hidroponik premium yang diformulasikan khusus untuk
+                hasil panen yang optimal dan berkualitas tinggi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Lele Peju -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden hover-lift fade-in md:col-span-2 lg:col-span-1 shadow-lg"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Fresh catfish in aquaponics system"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mb-6 -mt-12 relative shadow-lg"
+              >
+                <i class="fas fa-fish text-cyan-600 text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Lele Peju</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Ikan lele berkualitas tinggi yang dibudidayakan dengan sistem
+                aquaponik terintegrasi. Sehat, segar, dan gurih.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visi Misi -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <!-- Visi -->
+          <div class="fade-in">
+            <div class="mb-8">
+              <img
+                src="https://images.unsplash.com/photo-1591871937573-74dbba515c4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Vision of sustainable farming"
+                class="w-full h-64 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div
+              class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-eye text-emerald-600 text-2xl"></i>
+            </div>
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">Visi Kami</h3>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Menjadi pelopor pertanian hidroponik ramah lingkungan yang tumbuh
+              bersama masyarakat dengan nilai kebersamaan, keberlanjutan, dan
+              kehangatan.
+            </p>
+          </div>
+
+          <!-- Misi -->
+          <div class="fade-in">
+            <div class="mb-8">
+              <img
+                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Mission of community empowerment"
+                class="w-full h-64 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-target text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">Misi Kami</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"
+                ></div>
+                <p class="text-gray-600">
+                  Mengedukasi dan menginspirasi masyarakat untuk mengenal
+                  pertanian hidroponik melalui konten yang ringan, jujur, dan
+                  membumi.
+                </p>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"
+                ></div>
+                <p class="text-gray-600">
+                  Mengembangkan sistem hidroponik yang efisien, mudah diakses,
+                  dan ramah lingkungan.
+                </p>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"
+                ></div>
+                <p class="text-gray-600">
+                  Menjalin hubungan erat dengan pelanggan, mitra, dan komunitas
+                  melalui semangat kebersamaan dan transparansi.
+                </p>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"
+                ></div>
+                <p class="text-gray-600">
+                  Memberdayakan pemuda dan petani lokal dengan teknologi
+                  pertanian sederhana dan berkelanjutan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="gradient-bg text-white">
+      <div class="container mx-auto max-w-6xl px-6 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Brand -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center space-x-3 mb-6">
+              <div
+                class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-seedling text-white text-xl"></i>
+              </div>
+              <div class="text-white text-xl font-semibold">
+                <div class="font-bold">MAKNA TUMBUH GARDEN</div>
+              </div>
+            </div>
+            <p class="text-emerald-100 leading-relaxed mb-6 max-w-md">
+              Solusi pertanian hidroponik yang sehat, ramah lingkungan, dan
+              penuh makna untuk masa depan yang hijau dan berkelanjutan.
+            </p>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <h4 class="font-bold text-lg mb-6">Kontak Kami</h4>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone-alt text-emerald-200"></i>
+                <span class="text-emerald-100">+62 812-3456-7890</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-emerald-200"></i>
+                <span class="text-emerald-100">info@maknatumbuh.id</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-map-marker-alt text-emerald-200"></i>
+                <span class="text-emerald-100">Bandung, Indonesia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h4 class="font-bold text-lg mb-6">Ikuti Kami</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200"
+              >
+                <i class="fab fa-instagram text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200"
+              >
+                <i class="fab fa-facebook text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200"
+              >
+                <i class="fab fa-youtube text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-emerald-400 border-opacity-30 pt-8 text-center"
+        >
+          <p class="text-emerald-100">
+            &copy; 2025 Makna Tumbuh Garden. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            // Close mobile menu if open
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Header background on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.classList.add("bg-white", "shadow-sm");
+          header.classList.remove("glass-effect");
+        } else {
+          header.classList.remove("bg-white", "shadow-sm");
+          header.classList.add("glass-effect");
+        }
+      });
+    </script>
+  </body>
+</html>
